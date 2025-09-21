@@ -33,6 +33,7 @@ export default function RevenueByLocation() {
         width: "100%",
         margin: "0 auto",
         fontFamily: "Inter,sans-serif",
+        minHeight: "450px",
       }}
     >
       <Text
@@ -48,7 +49,7 @@ export default function RevenueByLocation() {
         <ComposableMap
           projectionConfig={{ scale: 96, center: [0, 14] }}
           width={400}
-          height={190}
+          height={250}
           style={{ width: "100%" }}
         >
           <Geographies geography={geoUrl}>

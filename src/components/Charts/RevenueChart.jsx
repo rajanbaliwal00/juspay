@@ -63,7 +63,7 @@ export default function ResponsiveRevenueChart() {
           </li>
         </div>
       </Flex>
-      <div style={{ width: "100%", height: "100%" }}>
+      <div style={{ width: "100%", height: "100%", minHeight: "300px" }}>
         <ResponsiveContainer width="100%" height="95%">
           <LineChart data={data}>
             <CartesianGrid stroke="#ededed" vertical={false} />

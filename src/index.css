@@ -225,3 +225,10 @@ body {
     border: 1px solid CanvasText;
   }
 }
+
+@media (max-width: 1024px) {
+  html {
+    /* desktop styles */
+    font-size: 10px;
+  }
+}

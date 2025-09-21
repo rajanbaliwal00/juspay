@@ -1,13 +1,14 @@
 import { Breadcrumb, Flex, theme } from "antd";
 import { Vector, Star } from "../assets";
 
-const HeaderLeft = () => {
+const HeaderLeft = ({ handleToggleLeftSidebar }) => {
   const {
     token: { gap, paddingXSmall, paddingXSmall2, colorPrimary },
   } = theme.useToken();
   return (
     <Flex gap={gap} align="center">
       <svg
+        onClick={() => handleToggleLeftSidebar()}
         style={{ cursor: "pointer" }}
         width="20"
         height="20"
