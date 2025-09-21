@@ -1,0 +1,227 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+/* Hide default arrow */
+.ant-menu-submenu-arrow {
+  display: none;
+}
+
+/* Create custom arrow on left */
+.ant-menu-submenu-title {
+  position: relative;
+  padding-left: 20px; /* space for arrow */
+}
+
+.ant-menu-submenu-title::before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23c4c4c4' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 18 15 12 9 6'/></svg>");
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow down when submenu is open */
+.ant-menu-submenu-open > .ant-menu-submenu-title::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.custom-card {
+  background: #f7f9fb;
+  border-radius: 16px;
+  width: 100%;
+  padding: 24px;
+  font-family: "Inter", sans-serif;
+}
+
+.custom-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 3rem;
+  line-height: 1.35;
+}
+
+.custom-ant-table .ant-table {
+  background: transparent !important;
+  border-radius: 10px;
+}
+
+.custom-ant-table .ant-table-thead > tr > th {
+  background: transparent !important;
+  border-bottom: 1.5px solid rgba(28, 28, 28, 0.13) !important;
+  font-size: 14px;
+  color: rgba(28, 28, 28, 0.4);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 8px 12px 8px 0px !important;
+}
+
+.custom-ant-table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid rgba(28, 28, 28, 0.13) !important;
+  background: transparent !important;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #1c1c1c;
+  line-height: 20px;
+  padding: 8px 12px 8px 0px !important;
+}
+
+.custom-ant-table .ant-table-tbody > tr:last-child > td {
+  border-bottom: none !important;
+}
+
+.custom-ant-table .ant-table-cell,
+.custom-ant-table .ant-table-thead > tr > th {
+  border-radius: 0 !important;
+}
+
+.custom-td {
+  font-size: 0.8rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #1c1c1c;
+  line-height: 20px;
+}
+
+.custom-row:hover td {
+  background: #f7f9fb !important;
+}
+
+/* Removes header vertical split lines */
+.custom-ant-table .ant-table-thead > tr > th::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Add this CSS in your stylesheet, or in a <style> block if using CSS-in-JS */
+.custom-ant-table-figma .ant-table-thead > tr > th {
+  background: transparent !important;
+  border-bottom: 1.5px solid #f4f4f4 !important;
+  font-size: 12px;
+  color: rgba(28, 28, 28, 0.4);
+  padding: 9px 14px 9px 7px !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.custom-ant-table-figma .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #f4f4f4 !important;
+  background: transparent !important;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #1c1c1c;
+  padding: 7px 14px 7px 7px !important;
+}
+
+.custom-ant-table-figma .ant-table-tbody > tr:last-child > td {
+  border-bottom: none !important;
+}
+
+/* Hide all non-table controls for clean look */
+.custom-ant-table-figma .ant-table-filter-column,
+.custom-ant-table-figma .ant-table-cell.ant-table-column-sort {
+  background: none !important;
+}
+
+.custom-ant-table-figma .ant-table-thead > tr > th::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Accessibility styles */
+:focus {
+  outline: 2px solid #1890ff;
+  outline-offset: 2px;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  overflow: visible;
+  background: #fff;
+  padding: 1rem;
+  z-index: 9999;
+}
+
+/* High contrast mode support */
+@media screen and (forced-colors: active) {
+  .custom-card {
+    border: 1px solid CanvasText;
+  }
+}
